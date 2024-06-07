@@ -1,0 +1,82 @@
+/* Estilo para a disposição do círculo */
+body{
+    margin: 0px
+}
+
+#playerConnections{
+    position: absolute;
+    width: 60vh;
+    height: 60vh;
+    top: calc(50% - 31.5vh);
+    left: calc(50% - 29.6vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playerConnections img{
+    position:absolute;
+}
+#playerConnections img:nth-child(1){
+    width: 40%;
+}
+#playerConnections img:nth-child(2){
+    width: 30%;
+}
+#playerConnections img:nth-child(3){
+    width: 80%;
+    animation: rotate 10s linear infinite;
+}
+
+#list1 {
+    position: relative;
+    width: 55.8vh;
+    height: 60.1vh;
+    top: 16.1vh;
+    left: calc(50% - 30vh);
+    border-radius: 50%;
+    border-color: #ccccf0;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Estilo para o círculo */
+.player {
+    position: absolute;
+    width: 75px; /* Tamanho do player */
+    height: 75px; /* Tamanho do player */
+    border-radius: 50%; /* Torna o elemento circular */
+    background-color: #ccc; /* Cor de fundo cinza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center center;
+    left: calc(50% - 37.5px);
+    top: calc(50% - 37.5px);
+
+    transition: 0.2s;
+}
+.player:hover{
+    width: 80px; /* Tamanho do player */
+    height: 80px; /* Tamanho do player */
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    background-color: aqua;
+    cursor: pointer;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
