@@ -18,13 +18,13 @@ body{
     position:absolute;
 }
 #playerConnections img:nth-child(1){
-    width: 40%;
+    width: 35%;
 }
 #playerConnections img:nth-child(2){
-    width: 30%;
+    width: 25%;
 }
 #playerConnections img:nth-child(3){
-    width: 80%;
+    width: 75%;
     animation: rotate 10s linear infinite;
 }
 
