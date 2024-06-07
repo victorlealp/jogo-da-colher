@@ -30,7 +30,7 @@ export const playerList = {
         if (this.exist(playerName)) {
             deadPlayers.push(this.list[deadPlayerIndex])
 
-            console.log(`O jogador ${playerName} deu uma colherada em ${this.list[predatorPlayerIndex].name}`)
+            console.log(`O jogador ${this.list[predatorPlayerIndex].name} deu uma colherada em ${playerName}`)
 
             this.list[predatorPlayerIndex].kills.push({
                 prey: this.list[deadPlayerIndex],
