@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/faveico.ico">
+    
     <title>Jogo da Colher</title>
 
+    <!-- Pages CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/pages/player/player.css">
+    
+    <!-- Entities CSS -->
+    <link rel="stylesheet" href="./src/entities/button.css">
 </head>
 <body>
     <div id="controles">
@@ -13,7 +20,8 @@
         <button onclick="addNewPlayer(document.getElementById('texto1').value)">+</button>
         <button onclick="removeFromList(document.getElementById('texto1').value)">-</button>
         <button onclick="printList()">Print</button>
-        <button onclick="shuffleList()">Shuffle</button>
+        <button onclick="shuffleList()">Embaralhar</button>
+        <button onclick="saveList()">Salvar</button>
     </div>
     <div id="game">
         <div id="playerConnections">

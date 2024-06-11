@@ -1,10 +1,11 @@
 import { playerList } from "./player.js";
 import { updatePlayerPositions } from "./position.js";
+import { savePlayerList, loadPlayerList } from "./storage.js";
 
 let currentPlayerName = '';
 
 async function loadModal() {
-    const response = await fetch('./src/player/player.html');
+    const response = await fetch('./src/pages/player/player.html');
     const modalContent = await response.text();
     document.getElementById('playerModal').innerHTML = modalContent;
 }
@@ -14,7 +15,7 @@ function addNewPlayer(playerName) {
     addToList(player);
 }
 
-function addToList(player) {
+export function addToList(player) {
     if (player) {
         const listItem = document.createElement('li');
         const circleDiv = document.createElement('div');
@@ -32,6 +33,10 @@ function addToList(player) {
 
         updatePlayerPositions();
     }
+}
+
+function saveList(){
+    savePlayerList();
 }
 
 function removeFromList(playerName){
@@ -117,23 +122,9 @@ window.printList = printList;
 window.shuffleList = shuffleList;
 window.removeCurrentPlayer = removeCurrentPlayer;
 window.closeModal = closeModal;
-
-// Inicialização
-addNewPlayer('Victor')
-addNewPlayer('Felipe')
-addNewPlayer('Lucas')
-addNewPlayer('Anthony')
-addNewPlayer('Henrique')
-addNewPlayer('Matheus')
-addNewPlayer('Elias')
-addNewPlayer('Emannuel')
-addNewPlayer('Izabella')
-addNewPlayer('Tiago')
-addNewPlayer('Zanetti')
-addNewPlayer('Klara')
-addNewPlayer('Israel')
-addNewPlayer('Bruno')
+window.saveList = saveList;
 
 window.onload = function() {
+    loadPlayerList();
     updatePlayerPositions();
 };

@@ -53,23 +53,25 @@ export const playerList = {
         this.initialize()
     },
     initialize: function () {
-        this.list[0].predator = this.list[this.list.length - 1].name
-
-        this.list.forEach((player, index) => {
-            if (index == 0 && this.list.length > 1) {
-                player.predator = this.list[this.list.length - 1].name
-                player.prey = this.list[index + 1].name
-            }
-            else if (index == (this.list.length - 1) && this.list.length > 1) {
-                player.predator = this.list[index - 1].name
-                player.prey = this.list[0].name
-            } else if (index > 0 && index < (this.list.length - 1) && this.list.length > 1) {
-                player.predator = this.list[index - 1].name
-                player.prey = this.list[index + 1].name
-            } else {
-                player.predator = null;
-                player.prey = null;
-            }
-        });
+        if(this.list.length > 0){
+            this.list[0].predator = this.list[this.list.length - 1].name
+    
+            this.list.forEach((player, index) => {
+                if (index == 0 && this.list.length > 1) {
+                    player.predator = this.list[this.list.length - 1].name
+                    player.prey = this.list[index + 1].name
+                }
+                else if (index == (this.list.length - 1) && this.list.length > 1) {
+                    player.predator = this.list[index - 1].name
+                    player.prey = this.list[0].name
+                } else if (index > 0 && index < (this.list.length - 1) && this.list.length > 1) {
+                    player.predator = this.list[index - 1].name
+                    player.prey = this.list[index + 1].name
+                } else {
+                    player.predator = null;
+                    player.prey = null;
+                }
+            });
+        }
     }
 }

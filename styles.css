@@ -1,6 +1,7 @@
 /* Estilo para a disposição do círculo */
 body{
-    margin: 0px
+    margin: 0px;
+    font-family: "Amazon Ember",sans-serif;
 }
 
 #playerConnections{
@@ -50,13 +51,14 @@ li{
 /* Estilo para o círculo */
 .player {
     position: absolute;
-    width: 75px; /* Tamanho do player */
-    height: 75px; /* Tamanho do player */
+    width: 80px; /* Tamanho do player */
+    height: 80px; /* Tamanho do player */
     border-radius: 50%; /* Torna o elemento circular */
     background-color: #ccc; /* Cor de fundo cinza */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     transform-origin: center center;
     left: calc(50% - 37.5px);
     top: calc(50% - 37.5px);
@@ -71,6 +73,19 @@ li{
     background-color: aqua;
     cursor: pointer;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
 
 @keyframes rotate{
     from{
