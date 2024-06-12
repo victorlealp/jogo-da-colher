@@ -4,7 +4,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "npx electron-packager . JogodaColher --platform=win32 --arch=x64 --out=dist"
+    "pack": "npx electron-packager . JogodaColher --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "devDependencies": {
     "electron": "^31.0.0",

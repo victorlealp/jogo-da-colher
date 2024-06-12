@@ -29,7 +29,7 @@ export function addToList(player) {
         circleDiv.appendChild(span);
         listItem.appendChild(circleDiv);
 
-        document.getElementById('list1').appendChild(listItem);
+        document.getElementById('player-list').appendChild(listItem);
 
         updatePlayerPositions();
     }
@@ -45,7 +45,7 @@ function removeFromList(playerName){
         playerList.remove(playerName);
 
         // Encontra todos os elementos da lista correspondentes ao jogador removido
-        const list = document.getElementById('list1');
+        const list = document.getElementById('player-list');
         const listItems = list.querySelectorAll(`li > div.player > span`);
         
         // Percorre todos os elementos da lista e remove o jogador correto
@@ -70,7 +70,7 @@ function shuffleList(){
     playerList.shuffle()
 
     // Encontra todos os elementos da lista correspondentes ao jogador removido
-    const list = document.getElementById('list1');
+    const list = document.getElementById('player-list');
     list.innerHTML = '';
 
     playerList.list.forEach(player => addToList(player));

@@ -1,6 +1,6 @@
 // Esta função será usada para atualizar as posições dos jogadores ao adicionar novos
 export function updatePlayerPositions() {
-    const players = document.querySelectorAll('#list1 .player');
+    const players = document.querySelectorAll('#player-list .player');
     if(players.length > 0){
         const totalPlayers = players.length;
         const angleIncrement = 360 / totalPlayers; // Incremento do ângulo para cada player
