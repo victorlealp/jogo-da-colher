@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="./src/pages/player/player.css">
     
     <!-- Entities CSS -->
-    <link rel="stylesheet" href="./src/entities/button.css">
+    <link rel="stylesheet" href="./entities/button.css">
+    <link rel="stylesheet" href="./entities/player.css">
 </head>
 <body>
     <div id="controles">
         <input id="texto1" type="text">
-        <button onclick="addNewPlayer(document.getElementById('texto1').value)">+</button>
-        <button onclick="removeFromList(document.getElementById('texto1').value)">-</button>
-        <button onclick="printList()">Print</button>
-        <button onclick="shuffleList()">Embaralhar</button>
-        <button onclick="saveList()">Salvar</button>
+        <button class="button" onclick="addNewPlayer(document.getElementById('texto1').value)">+</button>
+        <button class="button" onclick="removeFromList(document.getElementById('texto1').value)">-</button>
+        <button class="button" onclick="printList()">Print</button>
+        <button class="button" onclick="shuffleList()">Embaralhar</button>
+        <button class="button" onclick="saveList()">Salvar</button>
     </div>
     <div id="game">
         <div id="jogo-da-colher">
