@@ -5,7 +5,7 @@ import { savePlayerList, loadPlayerList } from "./storage.js";
 let currentPlayerName = '';
 
 async function loadModal() {
-    const response = await fetch('./src/pages/player/player.html');
+    const response = await fetch('./pages/player/player.html');
     const modalContent = await response.text();
     document.getElementById('playerModal').innerHTML = modalContent;
 }
