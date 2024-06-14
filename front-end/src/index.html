@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/faveico.ico">
+    
+    <title>Jogo da Colher</title>
+
+    <!-- Pages CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/pages/player/player.css">
+    
+    <!-- Entities CSS -->
+    <link rel="stylesheet" href="./entities/button.css">
+    <link rel="stylesheet" href="./entities/player.css">
+</head>
+<body>
+    <div id="controles">
+        <input id="texto1" type="text">
+        <button class="button" onclick="addNewPlayer(document.getElementById('texto1').value)">+</button>
+        <button class="button" onclick="removeFromList(document.getElementById('texto1').value)">-</button>
+        <button class="button" onclick="printList()">Print</button>
+        <button class="button" onclick="shuffleList()">Embaralhar</button>
+        <button class="button" onclick="saveList()">Salvar</button>
+    </div>
+    <div id="game">
+        <div id="jogo-da-colher">
+            <img src="./assets/colheres.png" alt="Foto de Colher">
+            <img src="./assets/morte.png" alt="Foto de Caveira">
+            <img src="./assets/sincronizar.png" alt="Seta de Sentido de Jogo">
+        </div>
+        <ul id="player-list">
+            <!-- Players serão adicionados aqui -->
+        </ul>
+        <!-- Contêiner para o modal -->
+        <div id="playerModal" class="modal"></div>
+    </div>
+    
+    <script type="module" src="./scripts/scripts.js"></script>
+    <script type="module" src="./scripts/position.js"></script>
+</body>
+</html>

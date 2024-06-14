@@ -1,0 +1,71 @@
+/* Estilo para a disposição do círculo */
+body{
+    margin: 0px;
+    font-family: "Amazon Ember",sans-serif;
+}
+
+#jogo-da-colher{
+    position: absolute;
+    width: 60vh;
+    height: 60vh;
+    top: calc(50% - 31.5vh);
+    left: calc(50% - 29.6vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jogo-da-colher img{
+    position:absolute;
+}
+#jogo-da-colher img:nth-child(1){
+    width: 35%;
+}
+#jogo-da-colher img:nth-child(2){
+    width: 25%;
+}
+#jogo-da-colher img:nth-child(3){
+    width: 75%;
+    animation: rotate 10s linear infinite;
+}
+
+#player-list {
+    position: relative;
+    width: 55.8vh;
+    height: 60.1vh;
+    top: 16.1vh;
+    left: calc(50% - 30vh);
+    border-radius: 50%;
+    border-color: #ccccf0;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}

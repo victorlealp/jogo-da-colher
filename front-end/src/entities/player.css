@@ -1,0 +1,25 @@
+/* Estilo para o círculo */
+.player {
+    position: absolute;
+    width: 80px; /* Tamanho do player */
+    height: 80px; /* Tamanho do player */
+    border-radius: 50%; /* Torna o elemento circular */
+    background-color: #ccc; /* Cor de fundo cinza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform-origin: center center;
+    left: calc(50% - 37.5px);
+    top: calc(50% - 37.5px);
+
+    transition: 0.2s;
+}
+.player:hover{
+    width: 80px; /* Tamanho do player */
+    height: 80px; /* Tamanho do player */
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    background-color: aqua;
+    cursor: pointer;
+}
