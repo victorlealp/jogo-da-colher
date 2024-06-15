@@ -1,14 +1,41 @@
 {
   "name": "jogo-da-colher",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "main.mjs",
+  "homepage": "./",
   "scripts": {
-    "start": "electron .",
-    "build": "node server.js",
-    "pack": "npx electron-packager . JogodaColher --platform=win32 --arch=x64 --out=dist --overwrite"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-pack": "npm run build && electron-builder -w --config electron-builder.json"
   },
   "devDependencies": {
-    "electron": "^31.0.1",
-    "electron-packager": "^17.1.1"
+    "electron": "^31.0.0",
+    "electron-builder": "^23.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "build": {
+    "appId": "com.myreactapp.app",
+    "files": [
+      "build/**/*",
+      "main.mjs",
+      "preload.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

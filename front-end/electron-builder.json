@@ -1,0 +1,14 @@
+{
+  "appId": "com.myreactapp.app",
+  "directories": {
+    "buildResources": "build"
+  },
+  "files": [
+    {
+      "from": "build",
+      "to": "."
+    },
+    "main.mjs",
+    "preload.js"
+  ]
+}
